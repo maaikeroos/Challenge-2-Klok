@@ -8,7 +8,7 @@ function realtimeClock(){
 	//toevoegen van pm en am
 	var amPM = (hours < 12) ? "AM" : "PM";
 
-	//convert the hours component to 12 hours format
+	//zet de urencomponent om in 12 urenformaat
 	hours = (hours > 12) ? hours - 12 : hours;
 
 	//
@@ -21,10 +21,10 @@ function realtimeClock(){
 		hours + " : " + minutes + " : " + seconds + " " + amPM;
 	var t = setTimeout(realtimeClock, 500);
 
-	if (amPM === 'AM') {
-		document.getElementByTagName('body')[0].style.backgroundColor = '#141824';
+	if (amPM === 'PM') {
+		document.getElementsByTagName('body')[0].style.backgroundColor = '#141824';
 	}
 	else{
-		document.getElementByTagName('body')[0].style.backgroundColor = '#FFFFFF';
+		document.getElementsByTagName('body')[0].style.backgroundColor = '#FFFFFF';
 	}
 }
