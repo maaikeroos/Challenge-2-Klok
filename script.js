@@ -20,4 +20,11 @@ function realtimeClock(){
 	document.getElementById('clock').innerHTML =
 		hours + " : " + minutes + " : " + seconds + " " + amPM;
 	var t = setTimeout(realtimeClock, 500);
+
+	if (amPM === 'AM') {
+		document.getElementByTagName('body')[0].style.backgroundColor = '#141824';
+	}
+	else{
+		document.getElementByTagName('body')[0].style.backgroundColor = '#FFFFFF';
+	}
 }
