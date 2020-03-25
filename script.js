@@ -8,7 +8,7 @@ function realtimeClock(){
 	//toevoegen van pm en am
 	var amPM = (hours < 12) ? "AM" : "PM";
 
-	//zet de urencomponent om in 12 urenformaat
+	//zet de urencomponent om in 24 urenformaat
 	var hours = (hours24 > 12) ? hours24 - 12 : hours24;
 
 	//
@@ -21,6 +21,7 @@ function realtimeClock(){
 		hours + " : " + minutes + " : " + seconds + " " + amPM;
 	var t = setTimeout(realtimeClock, 500);
 
+	//veranderd achtergrondkleur afhankelijk van de tijd
 	if (hours24 >= 19 || hours24<7) {
 		document.getElementsByTagName('body')[0].style.backgroundColor = '#141824';
 	}
