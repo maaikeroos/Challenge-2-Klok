@@ -1,7 +1,7 @@
 function realtimeClock(){
 	var rtClock = new Date ();
 
-	var hours = rtClock.getHours();
+	var hours24 = rtClock.getHours();
 	var minutes = rtClock.getMinutes();
 	var seconds = rtClock.getSeconds();
 
@@ -9,7 +9,7 @@ function realtimeClock(){
 	var amPM = (hours < 12) ? "AM" : "PM";
 
 	//zet de urencomponent om in 12 urenformaat
-	hours = (hours > 12) ? hours - 12 : hours;
+	var hours = (hours24 > 12) ? hours24 - 12 : hours24;
 
 	//
 	hours = ("0" + hours).slice(-2);
@@ -21,7 +21,7 @@ function realtimeClock(){
 		hours + " : " + minutes + " : " + seconds + " " + amPM;
 	var t = setTimeout(realtimeClock, 500);
 
-	if (amPM === 'PM') {
+	if (hours24 >= 19 || hours24<7) {
 		document.getElementsByTagName('body')[0].style.backgroundColor = '#141824';
 	}
 	else{
