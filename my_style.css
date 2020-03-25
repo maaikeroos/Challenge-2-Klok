@@ -16,14 +16,36 @@ html, body{
 }
 #clock{
 	width: 100%;
-	position: absolute;
-	font-size: 9em;
-	color: #34D0B8;
+	font-size: 7em;
+	color: white;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	margin-top: 17%;
 }
-
+.clock-box{
+	margin-top: 2%;
+	padding: 3em 1.5em;
+	background-image: linear-gradient(45deg, #6DF0D1, #19ABDE);
+	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	animation: bgblob 4s infinite 0.5s;
+}
+@keyframes bgblob{
+	0%{
+		border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	}
+	25%{
+		border-radius: 75% 25% 45% 55% / 30% 30% 70% 70%;
+	}
+	50%{
+		border-radius: 61% 39% 27% 73% / 62% 77% 23% 38%;
+	}
+	75%{
+		border-radius: 38% 62% 74% 26% / 75% 57% 43% 25%;
+	}
+	100%{
+		border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	}
+}
 @media only screen and (max-width: 600px){
 	.main-container{
 		flex-wrap: wrap;
