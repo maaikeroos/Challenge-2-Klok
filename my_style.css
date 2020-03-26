@@ -49,10 +49,8 @@ html, body{
 		flex-wrap: wrap;
         flex-direction: column;
 	} 
-	#clock, h1{
+	#clock,{
 		width: 90%;
-	}
-		#clock{
 		margin-top: 10%;
 	}
 }
@@ -63,10 +61,8 @@ html, body{
 		flex-wrap: wrap;
         flex-direction: column;
 	} 
-	#clock, h1{
-		width: 90%;
-	}
 	#clock{
+		width: 90%;
 		margin-top: 16%;
 	}
 }
@@ -77,10 +73,8 @@ html, body{
 		flex-wrap: wrap;
         flex-direction: column;
 	} 
-	#clock, h1{
-		width: 90%;
-	}
 	#clock{
+		width: 90%;
 		margin-top: 14%;
 	}
 }
